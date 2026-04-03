@@ -1,0 +1,70 @@
+.my-jobs-page { padding: 2rem 0; }
+.my-jobs-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.my-jobs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+.my-job-card { background: var(--card-bg); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); }
+.my-job-card h3 { display: flex; align-items: center; gap: 0.5rem; color: var(--text-color); margin-bottom: 0.5rem; font-size: 1.2rem; }
+.job-date { color: #64748b; font-size: 0.85rem; margin-bottom: 1.5rem; }
+.job-stats { display: flex; align-items: center; gap: 0.5rem; background: rgba(59, 130, 246, 0.1); color: var(--primary-color); padding: 0.8rem; border-radius: 8px; font-weight: 500; }
+
+@media (max-width: 1024px) {
+  .my-jobs-page {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-jobs-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .my-jobs-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .my-job-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-jobs-page {
+    padding: 1rem 0;
+  }
+
+  .my-jobs-header {
+    padding: 0 1rem;
+  }
+
+  .my-jobs-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .my-jobs-grid {
+    padding: 0 1rem;
+  }
+
+  .my-job-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .job-date {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .job-stats {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+}
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .my-jobs-page {
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+  }
+}

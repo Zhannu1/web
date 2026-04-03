@@ -1,0 +1,124 @@
+.admin-page {
+  animation: fadeIn 0.3s ease;
+}
+
+.admin-page h2 {
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  font-size: 1.6rem;
+}
+
+.admin-table-container {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.admin-table th, .admin-table td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.admin-table th {
+  background: rgba(59, 130, 246, 0.05);
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tbody tr:hover td {
+  background-color: rgba(59, 130, 246, 0.02);
+}
+
+.text-muted {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.user-cell, .mail-cell, .job-cell, .company-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.btn-delete-table {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error-color);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.btn-delete-table:hover {
+  background-color: var(--error-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .admin-page h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .admin-table th, 
+  .admin-table td {
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-page h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .admin-table-container {
+    border-radius: 8px;
+  }
+
+  .admin-table th, 
+  .admin-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .user-cell, 
+  .mail-cell, 
+  .job-cell, 
+  .company-cell {
+    gap: 0.4rem;
+  }
+
+  .text-muted {
+    font-size: 0.8rem;
+  }
+
+  .btn-delete-table {
+    padding: 0.6rem;
+    min-width: 36px;
+    min-height: 36px;
+  }
+}

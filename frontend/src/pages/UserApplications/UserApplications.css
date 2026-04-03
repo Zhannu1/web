@@ -1,0 +1,146 @@
+.user-apps-page { 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem; 
+}
+
+.user-apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.user-app-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.user-app-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
+}
+
+.app-job-header { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+  margin-bottom: 0.5rem; 
+}
+
+.app-job-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.app-company { 
+  font-size: 0.95rem; 
+  color: #64748b; 
+  margin-bottom: 1.5rem; 
+  flex: 1;
+}
+
+.app-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 1rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.2rem;
+  margin-top: auto;
+}
+
+.app-status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  white-space: nowrap; 
+}
+
+.app-status-tag.pending { color: #b45309; background: #fef3c7; }
+.app-status-tag.accepted { color: #15803d; background: #dcfce7; }
+.app-status-tag.rejected { color: #b91c1c; background: #fee2e2; }
+
+@media (max-width: 1024px) {
+  .user-apps-page {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-apps-page h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .user-apps-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .user-app-card {
+    padding: 1.25rem;
+  }
+
+  .app-job-header h4 {
+    font-size: 1rem;
+  }
+
+  .app-company {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-apps-page {
+    padding: 1rem 0;
+  }
+
+  .user-apps-page h2 {
+    padding: 0 1rem;
+    font-size: 1.3rem;
+  }
+
+  .user-apps-grid {
+    padding: 0 1rem;
+  }
+
+  .user-app-card {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .app-card-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+  .app-status-tag {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .app-date {
+    font-size: 0.8rem;
+  }
+}
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .user-apps-page {
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+  }
+}

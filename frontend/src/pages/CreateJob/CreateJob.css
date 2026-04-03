@@ -1,0 +1,152 @@
+.create-job-page {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.form-card {
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 800px;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input-group-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group-stack label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.input-group-stack input, 
+.input-group-stack select, 
+.input-group-stack textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.file-upload {
+  margin-bottom: 2rem;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  color: #64748b;
+  transition: var(--transition);
+}
+
+.file-label:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+  .create-job-page {
+    padding: 2rem 1rem;
+  }
+  .form-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .create-job-page {
+    padding: 1.5rem 0.75rem;
+  }
+  .form-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  .input-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .form-header h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-job-page {
+    padding: 1rem 0.5rem;
+  }
+  .form-card {
+    padding: 1.25rem 1rem;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .form-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .input-group-stack label {
+    font-size: 0.85rem;
+  }
+  .input-group-stack input, 
+  .input-group-stack select, 
+  .input-group-stack textarea {
+    font-size: 16px !important;
+    padding: 0.75rem;
+  }
+  .file-label {
+    padding: 0.85rem;
+    font-size: 0.9rem;
+  }
+  .submit-btn {
+    padding: 0.85rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .create-job-page {
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+  }
+  .submit-btn {
+    margin-bottom: env(safe-area-inset-bottom);
+  }
+}
